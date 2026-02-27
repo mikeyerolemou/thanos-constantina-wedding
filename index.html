@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Θάνος & Κωνσταντίνα — 17.05.2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="./ok-logo-nobg.jpg">
+
+    <style>
+        :root{
+            --bg:#D9D3C9;
+            --sage:#C9D0CB;
+            --cream:#E7DFD2;
+            --paper:#E5E5E5;
+            --ink:#1A1A1A;
+
+            --shadow: rgba(26,26,26,.14);
+            --shadow2: rgba(26,26,26,.08);
+
+            --stroke: rgba(26,26,26,.10);
+            --stroke2: rgba(26,26,26,.08);
+
+            --glass: rgba(255,255,255,.72);
+            --glass2: rgba(255,255,255,.85);
+        }
+
+        *{ box-sizing:border-box; }
+
+        body{
+            margin:0;
+            min-height:100vh;
+            display:grid;
+            place-items:center;
+            background:var(--bg);
+            color:var(--ink);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            padding:28px 0;
+        }
+
+        .wrap{
+            width:min(92%, 460px);
+            position:relative;
+        }
+
+        .invite{
+            border-radius:26px;
+            box-shadow: 0 22px 55px var(--shadow), 0 10px 18px var(--shadow2);
+            overflow:hidden;
+            background: transparent;
+
+            opacity:0;
+            transform:translateY(12px);
+            animation:enter .7s cubic-bezier(.2,.8,.2,1) .05s forwards;
+        }
+
+        @keyframes enter{ to{opacity:1; transform:translateY(0)} }
+
+        /* TOP headline: tilt + not perfectly centered (like the print) */
+        .top{
+            padding: 34px 26px 18px;
+            background: transparent;
+            position: relative;
+        }
+
+        .tagline{
+            font-family:"Allura", cursive;
+            font-size:44px;
+            line-height:1.06;
+            letter-spacing:.01em;
+
+            /* invitation-like tilt & placement */
+            transform: rotate(-10deg);
+            transform-origin: left center;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        /* PANELS (match invitation proportions) */
+        .panels{
+            display:grid;
+            grid-template-columns: 1fr 46px 92px;
+            min-height: 460px;
+            background: var(--paper);
+        }
+
+        .panel-left{
+            background: var(--sage);
+            position:relative;
+        }
+
+        /* Logo: small, quiet, like invitation */
+        .logo{
+            position:absolute;
+            top: 22px;
+            left: 22px;
+            width: 78px;       /* keep small like print */
+            /*height:auto;*/
+            opacity:.9;
+            filter:none;
+        }
+
+        /* Names: bottom-left with horizontal line next to ΘΑΝΟΣ */
+        .names{
+            position:absolute;
+            left: 28px;
+            bottom: 26px;
+
+            display:grid;
+            grid-template-columns: 54px auto;
+            column-gap: 14px;
+            align-items:start;
+
+            font-family:"Cormorant Garamond", serif;
+            text-transform:uppercase;
+            letter-spacing:.10em;
+            font-weight:500;
+            color: rgba(26,26,26,.88);
+        }
+
+        .names .line{
+            height:1px;
+            background: rgba(26,26,26,.28);
+            margin-top: 14px;  /* aligns with first line (ΘΑΝΟΣ +) */
+        }
+
+        .names .who{
+            font-size: 22px;
+            line-height: 1.25;
+        }
+
+        /* Cream strip: start at top (not centered) */
+        .panel-strip{
+            background: var(--cream);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+
+            padding-top: 26px;
+            padding-right: 6px;
+
+            letter-spacing:.25em;
+            font-size: 12px;
+            color: rgba(26,26,26,.65);
+        }
+
+        /* Date column: lighter + more “print” feel */
+        .panel-date{
+            background:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .date-vertical{
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+
+            font-family:"Cormorant Garamond", serif;
+            font-size: 56px;
+            font-weight: 400;
+            letter-spacing: .06em;
+
+            color: rgba(26,26,26,.42);
+            user-select:none;
+        }
+
+        /* Content block */
+        .content{
+            background: var(--glass);
+            padding: 18px;
+            backdrop-filter: blur(6px);
+        }
+
+        .row{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+
+        .when{
+            font-size:14px;
+            opacity:.82;
+        }
+
+        .add-cal{
+            font-size:13px;
+            font-weight:600;
+            text-decoration:none;
+            color:var(--ink);
+            border-bottom:1px solid rgba(26,26,26,.35);
+            padding-bottom:2px;
+            opacity:.85;
+        }
+        .add-cal:hover{ opacity:1; }
+
+        .countdown{
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:10px;
+            margin:14px 0 16px;
+        }
+
+        .cd{
+            background: rgba(255,255,255,.65);
+            border:1px solid var(--stroke2);
+            border-radius:16px;
+            padding:10px;
+            text-align:center;
+        }
+
+        .num{ font-weight:700; font-size:18px; line-height:1.1; }
+        .lbl{ font-size:12px; opacity:.75; margin-top:4px; }
+
+        /* Section headings above button groups */
+        .section-title{
+            text-align:left;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+            opacity:.65;
+            margin: 14px 0 8px;
+            padding-left: 2px;
+        }
+
+        .buttons{
+            display:grid;
+            gap:10px;
+            margin:0 0 6px;
+        }
+
+        .btn{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            padding:14px;
+            border-radius:16px;
+            text-decoration:none;
+            background: var(--glass2);
+            border:1px solid var(--stroke);
+            color:var(--ink);
+            font-weight:600;
+            transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+        }
+
+        .btn:hover{
+            transform: translateY(-1px);
+            background: rgba(255,255,255,.95);
+            box-shadow: 0 10px 18px rgba(26,26,26,.06);
+        }
+        .btn:active{ transform: translateY(0); }
+
+        .btn.primary{
+            background: var(--ink);
+            color:#fff;
+            border-color: rgba(26,26,26,.25);
+        }
+        .btn.primary:hover{ background:#000; }
+
+        .footer{
+            text-align:center;
+            margin-top:14px;
+            font-size:12px;
+            opacity:.75;
+            line-height:1.45;
+        }
+
+        @media (prefers-reduced-motion: reduce){
+            .invite{ animation:none !important; opacity:1; transform:none; }
+            .btn{ transition:none !important; }
+            .tagline{ transform:none; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="invite">
+
+        <div class="top">
+            <div class="tagline">These kids<br/>are getting married</div>
+        </div>
+
+        <div class="panels">
+            <div class="panel-left">
+                <img class="logo" src="./ok-logo-nobg.jpg" alt="ΘΚ logo">
+
+                <div class="names">
+                    <div class="line"></div>
+                    <div class="who">ΘΑΝΟΣ +<br/>ΚΩΝΣΤΑΝΤΙΝΑ</div>
+                </div>
+            </div>
+
+            <div class="panel-strip">we decided on forever</div>
+
+            <div class="panel-date">
+                <div class="date-vertical">17·05·2026</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="when">Κυριακή, 17 Μαΐου 2026</div>
+                <a class="add-cal" href="./wedding.ics" download>📅 Προσθήκη στο ημερολόγιο</a>
+            </div>
+
+            <div class="countdown" id="countdown">
+                <div class="cd"><div class="num" id="cdDays">—</div><div class="lbl">Ημέρες</div></div>
+                <div class="cd"><div class="num" id="cdHours">—</div><div class="lbl">Ώρες</div></div>
+                <div class="cd"><div class="num" id="cdMins">—</div><div class="lbl">Λεπτά</div></div>
+                <div class="cd"><div class="num" id="cdSecs">—</div><div class="lbl">Δευτ.</div></div>
+            </div>
+
+            <div class="section-title">Τοποθεσίες</div>
+            <div class="buttons">
+                <a class="btn" href="CHURCH_MAPS_LINK" target="_blank" rel="noopener">⛪ Εκκλησία</a>
+                <a class="btn" href="VENUE_MAPS_LINK" target="_blank" rel="noopener">🥂 Χώρος Δεξίωσης</a>
+            </div>
+
+            <div class="section-title">RSVP</div>
+            <div class="buttons">
+                <a class="btn primary" href="RSVP_FORM_LINK" target="_blank" rel="noopener">📝 Δήλωση Παρουσίας</a>
+                <a class="btn primary" href="tel:+35700000000">📞 Επιβεβαίωση με κλήση</a>
+            </div>
+
+            <div class="section-title">Φωτογραφίες</div>
+            <div class="buttons">
+                <a class="btn" href="#" onclick="alert('Οι φωτογραφίες θα είναι διαθέσιμες εδώ μετά τον γάμο 💛'); return false;">
+                    📸 Προβολή φωτογραφιών (μετά την ημέρα)
+                </a>
+            </div>
+
+            <div class="footer">
+                Θα χαρούμε πολύ να είστε κοντά μας ❤️
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const target = new Date("2026-05-17T17:00:00+03:00").getTime();
+    const el = { d: cdDays, h: cdHours, m: cdMins, s: cdSecs };
+
+    function pad(n){ return String(n).padStart(2,"0"); }
+
+    function tick(){
+        const now = Date.now();
+        if(now >= target){
+            countdown.innerHTML = "Σήμερα είναι ο γάμος 🎉";
+            return;
+        }
+        let diff = target - now;
+
+        const days = Math.floor(diff / 86400000); diff -= days * 86400000;
+        const hours = Math.floor(diff / 3600000); diff -= hours * 3600000;
+        const mins = Math.floor(diff / 60000); diff -= mins * 60000;
+        const secs = Math.floor(diff / 1000);
+
+        el.d.textContent = days;
+        el.h.textContent = pad(hours);
+        el.m.textContent = pad(mins);
+        el.s.textContent = pad(secs);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+</script>
+</body>
+</html>
