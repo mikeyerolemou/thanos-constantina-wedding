@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thanos Konstantina Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:thanos-konstantina-wedding-20260517
+DTSTAMP:20260501T000000Z
+DTSTART:20260517T140000Z
+DTEND:20260517T200000Z
+SUMMARY:Γάμος Θάνου & Κωνσταντίνας
+DESCRIPTION:Σας περιμένουμε με χαρά! Δείτε λεπτομέρειες και RSVP εδώ:
+URL:https://mikeyerolemou.github.io/thanos-constantina-wedding/
+LOCATION:Κύπρος
+END:VEVENT
+
+END:VCALENDAR
