@@ -88,6 +88,7 @@
         .panel-left{
             background: var(--sage);
             position:relative;
+            overflow: hidden;
         }
 
         /* Logo: small, quiet, like invitation */
@@ -101,18 +102,18 @@
             filter:none;
         }
 
-        /* Names: bottom-left with horizontal line next to ΘΑΝΟΣ */
         .names{
             position:absolute;
-            left: 28px;
-            bottom: 26px;
+            left:28px;
+            bottom:26px;
 
             display:grid;
-            grid-template-columns: 54px auto;
-            column-gap: 14px;
+            grid-template-columns: 54px 1fr; /* line + text */
+            column-gap:14px;
             align-items:start;
 
-            font-family:"Cormorant Garamond", serif;
+            max-width: calc(100% - 56px);
+            font-family:"Cormorant Garamond",serif;
             text-transform:uppercase;
             letter-spacing:.10em;
             font-weight:500;
@@ -122,12 +123,15 @@
         .names .line{
             height:1px;
             background: rgba(26,26,26,.28);
-            margin-top: 14px;  /* aligns with first line (ΘΑΝΟΣ +) */
+            margin-top:14px;
         }
 
         .names .who{
-            font-size: 22px;
-            line-height: 1.25;
+            min-width:0;
+
+            white-space:nowrap;     /* prevents ΚΩΝΣΤΑΝΤΙΝΑ wrapping */
+            line-height:1.25;
+            font-size:22px;
         }
 
         /* Cream strip: start at top (not centered) */
@@ -278,6 +282,13 @@
             .btn{ transition:none !important; }
             .tagline{ transform:none; }
         }
+
+        @media (max-width:380px){
+            .names .who{
+                font-size:20px;
+                letter-spacing:.08em;
+            }
+        }
     </style>
 </head>
 
@@ -321,8 +332,8 @@
 
             <div class="section-title">Τοποθεσίες</div>
             <div class="buttons">
-                <a class="btn" href="CHURCH_MAPS_LINK" target="_blank" rel="noopener">⛪ Εκκλησία</a>
-                <a class="btn" href="VENUE_MAPS_LINK" target="_blank" rel="noopener">🥂 Χώρος Δεξίωσης</a>
+                <a class="btn" href="https://maps.app.goo.gl/SwrrJ7GXrLwMGZAb8" target="_blank" rel="noopener">⛪ Εκκλησία</a>
+                <a class="btn" href="https://maps.app.goo.gl/Mseo9Rz4fuZMNuzz8" target="_blank" rel="noopener">🥂 Χώρος Δεξίωσης</a>
             </div>
 
             <div class="section-title">RSVP</div>
