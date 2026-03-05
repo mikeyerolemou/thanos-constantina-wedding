@@ -5,67 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Θάνος & Κωνσταντίνα — 17.05.2026</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="./ok-logo.jpg">
 
     <style>
-        :root {
-            --bg: #D9D3C9;
-            --sage: #C9D0CB;
-            --cream: #E7DFD2;
-            --paper: #E5E5E5;
-            --ink: #1A1A1A;
 
-            --shadow: rgba(26, 26, 26, .14);
-            --shadow2: rgba(26, 26, 26, .08);
+        :root{
+            --bg:#D9D3C9;
+            --sage:#C9D0CB;
+            --cream:#E7DFD2;
+            --paper:#E5E5E5;
+            --ink:#1A1A1A;
 
-            --stroke: rgba(26, 26, 26, .10);
-            --stroke2: rgba(26, 26, 26, .08);
+            --shadow:rgba(26,26,26,.14);
+            --shadow2:rgba(26,26,26,.08);
 
-            --glass: rgba(255, 255, 255, .72);
-            --glass2: rgba(255, 255, 255, .85);
+            --stroke:rgba(26,26,26,.10);
+            --stroke2:rgba(26,26,26,.08);
+
+            --glass:rgba(255,255,255,.72);
+            --glass2:rgba(255,255,255,.85);
         }
 
-        * { box-sizing: border-box; }
+        *{box-sizing:border-box;}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            background: var(--bg);
-            color: var(--ink);
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            padding: 28px 0;
+        body{
+            margin:0;
+            min-height:100vh;
+            display:grid;
+            place-items:center;
+            background:var(--bg);
+            color:var(--ink);
+            font-family:Inter,system-ui;
+            padding:28px 0;
         }
 
-        /* paper + grain */
+        /* paper grain */
         body::before{
             content:"";
-            position: fixed;
-            inset: 0;
+            position:fixed;
+            inset:0;
             pointer-events:none;
-            opacity: .10;
+            opacity:.10;
             background:
                     radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,.35), transparent 55%),
                     radial-gradient(900px 600px at 85% 80%, rgba(0,0,0,.10), transparent 60%),
                     repeating-linear-gradient(0deg, rgba(0,0,0,.025) 0, rgba(0,0,0,.025) 1px, transparent 1px, transparent 3px);
-            mix-blend-mode: multiply;
+            mix-blend-mode:multiply;
         }
 
-        .wrap { width: min(92%, 460px); position: relative; }
+        .wrap{width:min(92%,460px);position:relative;}
 
-        .invite {
-            border-radius: 26px;
-            box-shadow: 0 22px 55px var(--shadow), 0 10px 18px var(--shadow2);
-            overflow: hidden;
-            background: transparent;
+        .invite{
+            border-radius:26px;
+            box-shadow:0 22px 55px var(--shadow),0 10px 18px var(--shadow2);
+            overflow:hidden;
+            background:transparent;
 
-            opacity: 0;
-            transform: translateY(12px);
-            animation: enter .7s cubic-bezier(.2, .8, .2, 1) .05s forwards;
-            position: relative;
+            opacity:0;
+            transform:translateY(12px);
+            animation:enter .7s cubic-bezier(.2,.8,.2,1) .05s forwards;
+            position:relative;
         }
 
         .invite::after{
@@ -78,316 +78,289 @@
             border-radius:26px;
         }
 
-        @keyframes enter {
-            to { opacity: 1; transform: translateY(0) }
+        @keyframes enter{
+            to{opacity:1;transform:translateY(0)}
         }
 
-        .top {
-            padding: 34px 26px 18px;
-            background: transparent;
-            position: relative;
+        .top{
+            padding:34px 26px 18px;
+            position:relative;
         }
 
-        .tagline {
-            font-family: "Allura", cursive;
-            font-size: 44px;
-            line-height: 1.06;
-            letter-spacing: .01em;
-            transform: rotate(-10deg);
-            transform-origin: left center;
-            width: fit-content;
-            margin: 0 auto;
+        .tagline{
+            font-family:"Allura",cursive;
+            font-size:44px;
+            line-height:1.06;
+            transform:rotate(-10deg);
+            transform-origin:left center;
+            width:fit-content;
+            margin:0 auto;
         }
 
-        .panels {
-            display: grid;
-            grid-template-columns: 1fr 46px 92px;
-            min-height: 460px;
-            background: var(--paper);
+        .panels{
+            display:grid;
+            grid-template-columns:1fr 46px 92px;
+            min-height:460px;
+            background:var(--paper);
         }
 
-        .panel-left {
-            background: var(--sage);
-            position: relative;
-            overflow: hidden;
+        .panel-left{
+            background:var(--sage);
+            position:relative;
+            overflow:hidden;
         }
 
-        .logo {
-            position: absolute;
-            top: 22px;
-            left: 22px;
-            width: 78px;
-            opacity: .9;
-            filter: none;
+        .logo{
+            position:absolute;
+            top:22px;
+            left:22px;
+            width:78px;
+            opacity:.9;
         }
 
-        .names {
-            position: absolute;
-            left: 28px;
-            bottom: 26px;
+        .names{
+            position:absolute;
+            left:28px;
+            bottom:26px;
 
-            display: grid;
-            grid-template-columns: 54px 1fr;
-            column-gap: 14px;
-            align-items: start;
+            display:grid;
+            grid-template-columns:54px 1fr;
+            column-gap:14px;
 
-            max-width: calc(100% - 56px);
-            font-family: "Cormorant Garamond", serif;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: rgba(26, 26, 26, .88);
+            max-width:calc(100% - 56px);
+            font-family:"Cormorant Garamond",serif;
+            text-transform:uppercase;
+            font-weight:500;
         }
 
-        .names .line {
-            height: 1px;
-            background: rgba(26, 26, 26, .28);
-            margin-top: 14px;
+        .names .line{
+            height:1px;
+            background:rgba(26,26,26,.28);
+            margin-top:14px;
         }
 
         .names .who{
-            min-width:0;
             white-space:nowrap;
             line-height:1.25;
-            font-size: clamp(18px, 5.2vw, 22px);
-            letter-spacing: clamp(.04em, .9vw, .10em);
+            font-size:clamp(18px,5.2vw,22px);
+            letter-spacing:clamp(.04em,.9vw,.10em);
         }
 
-        .panel-strip {
-            background: var(--cream);
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: 26px;
-            padding-right: 6px;
-            letter-spacing: .25em;
-            font-size: 12px;
-            color: rgba(26, 26, 26, .65);
+        .panel-strip{
+            background:var(--cream);
+            writing-mode:vertical-rl;
+            text-orientation:mixed;
+            display:flex;
+            align-items:flex-start;
+            padding-top:26px;
+            padding-right:6px;
+            letter-spacing:.25em;
+            font-size:12px;
+            color:rgba(26,26,26,.65);
         }
 
-        .panel-date {
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .panel-date{
+            background:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
 
-        .date-vertical {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 56px;
-            font-weight: 400;
-            letter-spacing: .06em;
-            color: rgba(26, 26, 26, .42);
-            user-select: none;
+        .date-vertical{
+            writing-mode:vertical-rl;
+            font-family:"Cormorant Garamond",serif;
+            font-size:56px;
+            letter-spacing:.06em;
+            color:rgba(26,26,26,.42);
         }
 
-        .content {
-            background: var(--glass);
-            padding: 18px;
-            backdrop-filter: blur(6px);
-            position: relative;
-            z-index: 1;
+        .content{
+            background:var(--glass);
+            padding:18px;
+            backdrop-filter:blur(6px);
         }
 
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            flex-wrap: wrap;
+        .row{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
         }
 
-        .when { font-size: 14px; opacity: .82; }
+        .when{font-size:14px;opacity:.82;}
 
-        .add-cal {
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--ink);
-            border-bottom: 1px solid rgba(26, 26, 26, .35);
-            padding-bottom: 2px;
-            opacity: .85;
-        }
-        .add-cal:hover { opacity: 1; }
-
-        .countdown {
-            display: grid;
-            grid-template-columns:repeat(4, 1fr);
-            gap: 10px;
-            margin: 14px 0 16px;
+        .add-cal{
+            font-size:13px;
+            font-weight:600;
+            text-decoration:none;
+            color:var(--ink);
+            border-bottom:1px solid rgba(26,26,26,.35);
         }
 
-        .cd {
-            background: rgba(255, 255, 255, .65);
-            border: 1px solid var(--stroke2);
-            border-radius: 16px;
-            padding: 10px;
-            text-align: center;
+        .countdown{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:10px;
+            margin:14px 0 16px;
         }
 
-        .num { font-weight: 700; font-size: 18px; line-height: 1.1; }
-        .lbl { font-size: 12px; opacity: .75; margin-top: 4px; }
-
-        .section-title {
-            text-align: left;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-            opacity: .65;
-            margin: 14px 0 8px;
-            padding-left: 2px;
+        .cd{
+            background:rgba(255,255,255,.65);
+            border:1px solid var(--stroke2);
+            border-radius:16px;
+            padding:10px;
+            text-align:center;
         }
 
-        .buttons {
-            display: grid;
-            gap: 10px;
-            margin: 0 0 6px;
+        .num{font-weight:700;font-size:18px;}
+        .lbl{font-size:12px;opacity:.75;}
+
+        .section-title{
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+            opacity:.65;
+            margin:14px 0 8px;
         }
 
-        /* buttons */
-        .btn {
-            position: relative;
+        .buttons{display:grid;gap:10px;}
+
+        .btn{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:14px;
+            border-radius:16px;
+            text-decoration:none;
+            background:var(--glass2);
+            border:1px solid var(--stroke);
+            color:var(--ink);
+            font-weight:600;
+            transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+            position:relative;
             overflow:hidden;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px;
-            border-radius: 16px;
-            text-decoration: none;
-            background: var(--glass2);
-            border: 1px solid var(--stroke);
-            color: var(--ink);
-            font-weight: 600;
-            transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
         }
 
-        .btn::after{
-            content:"";
-            position:absolute;
-            inset:-40%;
-            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 55%);
-            opacity:0;
-            transform: translateY(8px);
-            transition: opacity .18s ease, transform .18s ease;
-            pointer-events:none;
+        .btn:hover{
+            transform:translateY(-1px);
+            background:rgba(255,255,255,.95);
+            box-shadow:0 10px 18px rgba(26,26,26,.06);
         }
 
-        .btn:hover::after{ opacity:1; transform: translateY(0); }
+        .btn:active{transform:scale(.97);}
 
-        .btn:hover {
-            transform: translateY(-1px);
-            background: rgba(255, 255, 255, .95);
-            box-shadow: 0 10px 18px rgba(26, 26, 26, .06);
+        .btn.primary{
+            background:var(--ink);
+            color:#fff;
         }
 
-        .btn:active { transform: translateY(0) scale(.98); }
-
-        .btn.primary {
-            background: var(--ink);
-            color: #fff;
-            border-color: rgba(26, 26, 26, .25);
-        }
-        .btn.primary:hover { background: #000; }
-
-        .footer {
-            text-align: center;
-            margin-top: 14px;
-            font-size: 12px;
-            opacity: .75;
-            line-height: 1.45;
+        .footer{
+            text-align:center;
+            margin-top:14px;
+            font-size:12px;
+            opacity:.75;
         }
 
-        /* Modal RSVP */
+        /* MODAL */
+
         .modal{
             position:fixed;
             inset:0;
-            display:none;
             z-index:999;
+
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transition:opacity .22s ease,visibility .22s ease;
         }
-        .modal.open{ display:block; }
+
+        .modal.open{
+            opacity:1;
+            visibility:visible;
+            pointer-events:auto;
+        }
 
         .modal-backdrop{
             position:absolute;
             inset:0;
-            background: rgba(0,0,0,.35);
-            backdrop-filter: blur(4px);
+            background:rgba(0,0,0,0);
+            transition:background .22s ease;
+        }
+
+        .modal.open .modal-backdrop{
+            background:rgba(0,0,0,.35);
         }
 
         .modal-card{
             position:relative;
-            width: min(92vw, 720px);
-            height: min(86vh, 900px);
-            margin: 6vh auto 0;
-            background: rgba(255,255,255,.92);
-            border: 1px solid rgba(0,0,0,.10);
-            border-radius: 18px;
-            box-shadow: 0 25px 70px rgba(0,0,0,.25);
+            width:min(92vw,720px);
+            height:min(86vh,900px);
+            margin:6vh auto 0;
+
+            background:white;
+            border-radius:18px;
+            box-shadow:0 25px 70px rgba(0,0,0,.25);
             overflow:hidden;
+
             display:flex;
-            flex-direction: column;
+            flex-direction:column;
+
+            transform:translateY(16px) scale(.98);
+            opacity:0;
+            transition:transform .22s ease,opacity .22s ease;
+        }
+
+        .modal.open .modal-card{
+            transform:translateY(0) scale(1);
+            opacity:1;
         }
 
         .modal-close{
             position:absolute;
             top:10px;
             right:10px;
+            width:38px;
+            height:38px;
+            border-radius:12px;
             border:0;
-            background: rgba(0,0,0,.06);
-            color: var(--ink);
-            width:36px;
-            height:36px;
-            border-radius: 12px;
             cursor:pointer;
+            background:rgba(0,0,0,.08);
             font-size:18px;
+            z-index:50;
         }
 
         .modal-title{
-            padding: 16px 16px 0;
-            font-weight: 800;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            font-size: 12px;
+            padding:16px 16px 0;
+            font-weight:800;
+            letter-spacing:.12em;
+            text-transform:uppercase;
+            font-size:12px;
             opacity:.7;
         }
 
         .modal-sub{
-            padding: 6px 16px 12px;
-            font-size: 13px;
+            padding:6px 16px 12px;
+            font-size:13px;
             opacity:.75;
         }
 
         .modal-frame{
             flex:1;
-            padding: 0 10px 10px;
+            padding:0 10px 10px;
         }
 
         .modal-frame iframe{
             width:100%;
             height:100%;
             border:0;
-            border-radius: 14px;
-            background:#fff;
+            border-radius:14px;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .invite { animation: none !important; opacity: 1; transform: none; }
-            .btn { transition: none !important; }
-            .tagline { transform: none; }
-        }
-
-        @media (max-width: 380px) {
-            .names .who { font-size: 20px; letter-spacing: .08em; }
-        }
     </style>
 </head>
 
 <body>
+
 <div class="wrap">
     <div class="invite">
 
@@ -397,7 +370,8 @@
 
         <div class="panels">
             <div class="panel-left">
-                <img class="logo" src="./ok-logo-nobg.jpg" alt="ΘΚ logo">
+                <img class="logo" src="./ok-logo-nobg.jpg">
+
                 <div class="names">
                     <div class="line"></div>
                     <div class="who">ΘΑΝΟΣ +<br/>ΚΩΝΣΤΑΝΤΙΝΑ</div>
@@ -412,6 +386,7 @@
         </div>
 
         <div class="content">
+
             <div class="row">
                 <div class="when">Κυριακή, 17 Μαΐου 2026</div>
                 <a class="add-cal" href="./wedding.ics" download>📅 Προσθήκη στο ημερολόγιο</a>
@@ -426,21 +401,15 @@
 
             <div class="section-title">Τοποθεσίες</div>
             <div class="buttons">
-                <a class="btn" href="https://maps.app.goo.gl/SwrrJ7GXrLwMGZAb8" target="_blank" rel="noopener">⛪ Εκκλησία</a>
-                <a class="btn" href="https://maps.app.goo.gl/Mseo9Rz4fuZMNuzz8" target="_blank" rel="noopener">🥂 Χώρος Δεξίωσης</a>
+                <a class="btn" href="https://maps.app.goo.gl/SwrrJ7GXrLwMGZAb8" target="_blank">⛪ Εκκλησία</a>
+                <a class="btn" href="https://maps.app.goo.gl/Mseo9Rz4fuZMNuzz8" target="_blank">🥂 Χώρος Δεξίωσης</a>
             </div>
 
             <div class="section-title">RSVP</div>
             <div class="buttons">
-                <!-- Modal open (instead of embedded iframe) -->
                 <a class="btn primary" href="#" id="openRsvp">📝 Δήλωση Παρουσίας</a>
-
                 <a class="btn primary" href="tel:+35799756307">📞 Επιβεβαίωση με κλήση</a>
-
-                <a class="btn primary"
-                   href="sms:+35799756307?body=Γεια!%20Επιβεβαιώνω%20την%20παρουσία%20μου%20στo%20Γάμο%20σας%20.%20Αριθμός%20ατόμων:%20">
-                    💬 Επιβεβαίωση με SMS
-                </a>
+                <a class="btn primary" href="sms:+35799756307">💬 Επιβεβαίωση με SMS</a>
             </div>
 
             <div class="section-title">Μοιράσου το</div>
@@ -450,7 +419,8 @@
 
             <div class="section-title">Φωτογραφίες</div>
             <div class="buttons">
-                <a class="btn" href="#" onclick="alert('Οι φωτογραφίες θα είναι διαθέσιμες εδώ μετά τον γάμο 💛'); return false;">
+                <a class="btn" href="#"
+                   onclick="alert('Οι φωτογραφίες θα είναι διαθέσιμες εδώ μετά τον γάμο 💛'); return false;">
                     📸 Προβολή φωτογραφιών (μετά την ημέρα)
                 </a>
             </div>
@@ -458,102 +428,101 @@
             <div class="footer">
                 Θα χαρούμε πολύ να είστε κοντά μας ❤️
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 
-<!-- RSVP Modal -->
-<div class="modal" id="rsvpModal" aria-hidden="true">
+<!-- MODAL -->
+
+<div class="modal" id="rsvpModal">
     <div class="modal-backdrop" data-close></div>
 
-    <div class="modal-card" role="dialog" aria-modal="true" aria-label="RSVP">
-        <button class="modal-close" type="button" data-close aria-label="Κλείσιμο">✕</button>
+    <div class="modal-card">
+        <button class="modal-close" data-close>✕</button>
 
         <div class="modal-title">RSVP</div>
-        <div class="modal-sub">Συμπληρώστε τη φόρμα παρακάτω</div>
+        <div class="modal-sub">Συμπληρώστε τη φόρμα</div>
 
         <div class="modal-frame">
-            <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSeeYvn1d7FNWFkzzE0C4Sbhqe2cuAzQpqwgF0DNauVhmU419A/viewform?embedded=true"
-                    loading="lazy"
-                    title="RSVP Form">
-            </iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeYvn1d7FNWFkzzE0C4Sbhqe2cuAzQpqwgF0DNauVhmU419A/viewform?embedded=true"></iframe>
         </div>
+
     </div>
 </div>
 
 <script>
-    const target = new Date("2026-05-17T17:00:00+03:00").getTime();
-    const el = { d: cdDays, h: cdHours, m: cdMins, s: cdSecs };
 
-    function pad(n){ return String(n).padStart(2, "0"); }
+    /* countdown */
+
+    const target = new Date("2026-05-17T17:00:00+03:00").getTime();
+    const el={d:cdDays,h:cdHours,m:cdMins,s:cdSecs};
+
+    function pad(n){return String(n).padStart(2,"0");}
 
     function tick(){
-        const now = Date.now();
-        if(now >= target){
-            countdown.innerHTML = "Σήμερα είναι ο γάμος 🎉";
-            return;
-        }
-        let diff = target - now;
+        const now=Date.now();
+        if(now>=target){countdown.innerHTML="Σήμερα είναι ο γάμος 🎉";return;}
 
-        const days = Math.floor(diff / 86400000); diff -= days * 86400000;
-        const hours = Math.floor(diff / 3600000); diff -= hours * 3600000;
-        const mins = Math.floor(diff / 60000); diff -= mins * 60000;
-        const secs = Math.floor(diff / 1000);
+        let diff=target-now;
 
-        el.d.textContent = days;
-        el.h.textContent = pad(hours);
-        el.m.textContent = pad(mins);
-        el.s.textContent = pad(secs);
+        const days=Math.floor(diff/86400000);diff-=days*86400000;
+        const hours=Math.floor(diff/3600000);diff-=hours*3600000;
+        const mins=Math.floor(diff/60000);diff-=mins*60000;
+        const secs=Math.floor(diff/1000);
+
+        el.d.textContent=days;
+        el.h.textContent=pad(hours);
+        el.m.textContent=pad(mins);
+        el.s.textContent=pad(secs);
     }
+
     tick();
-    setInterval(tick, 1000);
+    setInterval(tick,1000);
 
-    // Share button
-    document.getElementById('shareBtn')?.addEventListener('click', async (e) => {
+    /* share */
+
+    document.getElementById("shareBtn").addEventListener("click",async e=>{
         e.preventDefault();
-        const url = window.location.href;
-        const text = "Θάνος & Κωνσταντίνα — Πρόσκληση γάμου";
+        const url=location.href;
 
-        try{
-            if(navigator.share){
-                await navigator.share({ title: text, text, url });
-            }else{
-                await navigator.clipboard.writeText(url);
-                alert("Ο σύνδεσμος αντιγράφηκε 📋");
-            }
-        }catch(err){}
+        if(navigator.share){
+            await navigator.share({title:"Wedding Invitation",url});
+        }else{
+            navigator.clipboard.writeText(url);
+            alert("Ο σύνδεσμος αντιγράφηκε 📋");
+        }
     });
 
-    // RSVP modal
-    const modal = document.getElementById('rsvpModal');
-    const openBtn = document.getElementById('openRsvp');
+    /* modal */
+
+    const modal=document.getElementById("rsvpModal");
+    const openBtn=document.getElementById("openRsvp");
 
     function openModal(){
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden','false');
-        document.body.style.overflow = 'hidden';
+        modal.classList.add("open");
+        document.body.style.overflow="hidden";
     }
 
     function closeModal(){
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden','true');
-        document.body.style.overflow = '';
+        modal.classList.remove("open");
+        document.body.style.overflow="";
     }
 
-    openBtn?.addEventListener('click', (e) => {
+    openBtn.addEventListener("click",e=>{
         e.preventDefault();
         openModal();
     });
 
-    modal?.addEventListener('click', (e) => {
-        if(e.target.matches('[data-close]')) closeModal();
+    modal.addEventListener("click",e=>{
+        if(e.target.closest("[data-close]")) closeModal();
     });
 
-    document.addEventListener('keydown', (e) => {
-        if(e.key === 'Escape' && modal?.classList.contains('open')) closeModal();
+    document.addEventListener("keydown",e=>{
+        if(e.key==="Escape") closeModal();
     });
+
 </script>
+
 </body>
 </html>
